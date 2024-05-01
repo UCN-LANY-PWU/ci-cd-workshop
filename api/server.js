@@ -29,8 +29,8 @@ app.get('/api/names', (req, res) => {
 });
 
 // Connect to MongoDB
-// TODO: You must change the connectionstring to MongoDB when deploying in docker compose
-mongoose.connect('mongodb://127.0.0.1:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
+
+mongoose.connect('mongodb://ci-cd-database:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected...'))
   .catch(err => console.log(err));
 
