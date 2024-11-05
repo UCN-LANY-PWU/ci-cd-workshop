@@ -28,6 +28,11 @@ app.get('/api/names', (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
+// Get health check endpoint
+app.get('/api/hello', (req, res) => {
+  res.status(200).send("Hello, World!");
+});
+
 // Connect to MongoDB
 // TODO: You must change the connectionstring to MongoDB when deploying in docker compose
 mongoose.connect('mongodb://127.0.0.1:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
