@@ -25,7 +25,7 @@ app.post('/api/names', (req, res) => {
 app.get('/api/names', (req, res) => {
   Name.find()
     .then(names => res.json(names))
-    .catch(err => res.status(400).json(err));
+    .catch(err => res.status(500).json(err));
 });
 
 // Get health check endpoint
