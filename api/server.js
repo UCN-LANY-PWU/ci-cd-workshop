@@ -30,6 +30,8 @@ app.get('/api/names', (req, res) => {
 
 // Get health check endpoint
 app.get('/api/hello', (req, res) => {
+  // TODO: Check that all services this one depends on are running.
+
   res.status(200).send("Hello, World!");
 });
 
